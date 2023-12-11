@@ -1,0 +1,25 @@
+package Atividades_Gustavo_Lopes;
+import java.util.Scanner;
+public class Contas3 {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		int valor= entrada.nextInt();
+		int acogue = entrada.nextInt();
+		int farmacia = entrada.nextInt();
+		int padaria = entrada.nextInt();
+		// utilizando vetor
+		int resp = 0;
+		int [] contas = {acogue, farmacia, padaria};
+		if(contas[0] + contas[1] + contas[2] <= valor) 
+			resp = 3;
+		else if(contas[0] + contas[1] <= valor)
+			resp = 2;
+		else if (contas[0] <= valor)
+			resp = 1;
+		else
+			resp = 0;
+		System.out.printf("%d\n", resp);
+	}
+
+}
